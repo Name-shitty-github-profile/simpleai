@@ -1,7 +1,7 @@
 import openai
 from .context import context
 
-def get(prompt: str, username: str, ctx: context, key: str) -> str:
+def get(prompt: str, username: str, ctx: context, key: str) -> tuple[str, context]:
   openai.api_key = key
   ctx.add(username, prompt)
   try:
@@ -19,4 +19,4 @@ def get(prompt: str, username: str, ctx: context, key: str) -> str:
     ctx.delete(-1)
     return get(prompt, username, ctx, key)
   ctx.add("AI", prompt)
-  return response
+  return response, ctx
