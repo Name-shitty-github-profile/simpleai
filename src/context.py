@@ -4,7 +4,7 @@ class context:
     self.lst = [base]
 
   def delete(self, num):
-    del self.lst[-1]
+    del self.lst[num]
     return self
   
   def add(self, author: str, text: str):
