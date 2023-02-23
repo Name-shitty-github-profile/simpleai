@@ -37,7 +37,7 @@ class ai:
     try:
       response = openai.Completion.create(
         model="text-davinci-003",
-        prompt=str(self.tx) + '\nAI : ',
+        prompt=str(self.ctx) + '\nAI : ',
         temperature=0.5,
         max_tokens=1085,
         top_p=1,
