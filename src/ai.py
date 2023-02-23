@@ -54,6 +54,7 @@ class ai:
 
   def add_conv(self, conv: list):
     """
+    This function is to add more data or a conversation to the AI
     Conv structure
     A list of dicts with this structure
     ```json
