@@ -5,7 +5,6 @@ class ai:
     """
     This class is a really simple class that will allows you to chat with an IA really easily
     Here's an example of code to chat with the AI in the console
-
     ```python
     import simpleai, os
     ai = simpleai.ai("You are a server in a bar", [os.environ["key"]])
@@ -48,7 +47,7 @@ class ai:
     except Exception as e:
       print(e)
       self.ctx.delete(-1)
-      return self.get(content, username)
+      return self.talk(content, username)
     self.ctx.add("AI", response)
     return response
 
