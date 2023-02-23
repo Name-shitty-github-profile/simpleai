@@ -50,3 +50,12 @@ Console
 ```
 Hello, how are you?
 ```
+### add_conv
+This function is to add more data or a conversation to the AI
+<br>
+Conv structure
+<br>
+A list of dicts with this structure
+```json
+{"author": "The author of the message", "content": "The content of the message"}
+```
