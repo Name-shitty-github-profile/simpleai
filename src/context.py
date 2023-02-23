@@ -9,6 +9,8 @@ class context:
   
   def add(self, author: str, text: str):
     self.lst.append(f"{author} : {text}")
+    if len(self.lst) == 5:
+      del self.lst[1]
     return self
 
   def __str__(self):
