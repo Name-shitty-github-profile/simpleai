@@ -1,4 +1,4 @@
-# Talk with an AI in your code is hard? Isn't it?
+# Talking with an AI in your code is hard? Isn't it?
 Not anymore with this module !
 <br>
 You can talk with an AI in a couple of lines only !!!!
