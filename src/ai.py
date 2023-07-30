@@ -1,7 +1,7 @@
 from .context import context
 import openai, random
 class ai:
-  def __init__(self, base: str, keys: any, *, max_tokens=1084):
+  def __init__(self, base: str, keys: any, *, max_tokens=1084, max_conv_length=5):
     """
     This class is a really simple class that will allows you to chat with an IA really easily
     Here's an example of code to chat with the AI in the console
@@ -16,7 +16,7 @@ class ai:
     self.keys = [*keys]
     self.max_tokens = max_tokens
     self.base = base
-    self.ctx = context(base)
+    self.ctx = context(base, max_conv_length)
 
   def talk(self, content: str, username: str) -> str:
     """
