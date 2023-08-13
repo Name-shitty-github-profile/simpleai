@@ -7,13 +7,16 @@ class ai:
     Here's an example of code to chat with the AI in the console
     ```python
     import simpleai, os
-    ai = simpleai.ai("You are a server in a bar", [os.environ["key"]])
+    ai = simpleai.ai("You are a server in a bar", os.environ["key"])
     while True:
       content = input("Human :")
       print(ai.talk(content, "Human"))
     ```
     """
-    self.keys = [*keys]
+    if type(keys) != list:
+      self.keys = [key]
+    else:
+      self.keys = keys
     self.max_tokens = max_tokens
     self.base = base
     self.ctx = context(base, max_conv_length)
